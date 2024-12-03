@@ -189,7 +189,7 @@ decode videos using the de-tokenizer.
     <td style="width: 33%;">A woman in the kitchen shows
 George how to use a new kitchen gadget.</td>
     <td style="width: 33%;">George spreads the thick, peanutty
-paste, making a yummy snack</td>
+paste, making a yummy snack.</td>
   </tr>
   <tr>
     <td style="width: 33%;">
