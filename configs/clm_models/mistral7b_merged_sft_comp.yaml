@@ -1,0 +1,3 @@
+_target_: src.models.mistral.modeling_mistral.MistralForCausalLM.from_pretrained
+pretrained_model_name_or_path: pretrained/Divot_sft_comp/llm
+low_cpu_mem_usage: True

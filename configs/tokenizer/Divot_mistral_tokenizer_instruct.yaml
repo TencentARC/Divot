@@ -1,0 +1,2 @@
+_target_: transformers.LlamaTokenizer.from_pretrained
+pretrained_model_name_or_path: pretrained/cvlm_mistral_instruct_tokenizer

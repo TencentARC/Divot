@@ -1,0 +1,40 @@
+_target_: src.data.control_video.build_multi_datapipes
+_recursive_: False
+datapipes:
+
+  - _target_: src.data.control_video.build_video_caption_jsonl_datapipes
+    image_dir: WebVid/videos
+    data_dir: WebVid/annos
+    max_length: 180
+    num_frames: 16
+    num_clips: 1
+    fps: 8
+    stride: 4
+    num_video_tokens: 64
+    batch_size: 32
+    bilateral_attention: True
+    instruction_prompt: "[INST] {instruction} [/INST]\n"
+    min_aspect_ratio: 0.3
+    min_resolution: 100
+    cycle_count: 100
+    video_first: False
+
+
+  - _target_: src.data.control_video.build_videogen_img_tar_datapipes
+    data_dir:
+      - JourneyDB/wds
+    max_length: 180
+    batch_size: 32
+    bilateral_attention: True
+    instruction_prompt: "[INST] {instruction} [/INST]\n"
+    min_aspect_ratio: 0.3
+    min_resolution: 200
+    num_img_tokens: 64
+    num_frames: 5
+    video_first: False
+    drop_text_ratio: 0.0
+    cycle_count: 100
+
+sample_weights:
+  - 1.0
+  - 0.2

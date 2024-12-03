@@ -1,0 +1,14 @@
+_target_: src.models.dc_encoder.VideoRepreClipTemporalPoolModel.from_pretrained
+num_frames: 5
+input_dim: 1280
+hidden_size: 1024
+width: 768
+temporal_depth: 6
+pool_size: 5
+use_norm: True
+transformer_depth: 4
+resampler_depth: 6
+st_num_tokens: 125
+down_num_tokens: 64
+resampler_dim: 256
+pretrained_model_path: pretrained/Divot_tokenizer_detokenizer/Divot_tokenizer.bin

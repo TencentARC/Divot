@@ -1,0 +1,70 @@
+_target_: src.models.dc_detokenizer.DynamiCrafter.from_pretrained
+
+diffusion_model:
+  _target_: lvdm.modules.networks.openaimodel3d.UNetModel
+  in_channels: 4
+  out_channels: 4
+  model_channels: 320
+  attention_resolutions:
+  - 4
+  - 2
+  - 1
+  num_res_blocks: 2
+  channel_mult:
+  - 1
+  - 2
+  - 4
+  - 4
+  dropout: 0.1
+  num_head_channels: 64
+  transformer_depth: 1
+  context_dim: 1024
+  use_linear: true
+  use_checkpoint: True
+  temporal_conv: True
+  temporal_attention: True
+  temporal_selfatt_only: true
+  use_relative_position: false
+  use_causal_attention: False
+  temporal_length: 16
+  addition_attention: true
+  image_cross_attention: true
+  image_cross_attention_scale_learnable: true
+  default_fs: 3
+  fs_condition: true
+
+first_stage_model:
+  _target_: lvdm.models.autoencoder.AutoencoderKL
+  embed_dim: 4
+  monitor: val/rec_loss
+  ddconfig:
+    double_z: True
+    z_channels: 4
+    resolution: 256
+    in_channels: 3
+    out_ch: 3
+    ch: 128
+    ch_mult:
+    - 1
+    - 2
+    - 4
+    - 4
+    num_res_blocks: 2
+    attn_resolutions: []
+    dropout: 0.0
+  lossconfig:
+    target: torch.nn.Identity
+
+image_proj_model:
+  _target_: src.models.dc_encoder.Resampler_DC
+  dim: 1024
+  depth: 6
+  dim_head: 64
+  heads: 16
+  num_queries: 125
+  embedding_dim: 256
+  output_dim: 1024
+
+unconditional_guidance_scale: 7.5
+ddim_steps: 50
+pretrained_model_path: pretrained/Divot_tokenizer_detokenizer/Divot_detokenizer_stage2.bin

@@ -1,0 +1,39 @@
+_target_: src.data.control_video.build_multi_datapipes
+_recursive_: False
+datapipes:
+
+  - _target_: src.data.control_video.build_video_qa_jsonl_datapipes
+    image_dir: Video-LLaVA/videos
+    data_dir: Video-LLaVA/video_annos
+    max_length: 1650
+    num_frames: 16
+    num_clips: 20
+    fps: 8
+    stride: 4
+    num_video_tokens: 64
+    instruction_prompt: "[INST] {instruction} [/INST]\n"
+    batch_size: 6
+    min_aspect_ratio: 0.333
+    min_resolution: 100
+    cycle_count: 100
+
+
+  - _target_: src.data.control_video.build_video_qa_jsonl_datapipes
+    image_dir: Video-LLaVA/images
+    data_dir: Video-LLaVA/image_annos
+    max_length: 1000
+    num_frames: 5
+    num_clips: 1
+    fps: 2
+    stride: 0
+    num_video_tokens: 64
+    instruction_prompt: "[INST] {instruction} [/INST]\n"
+    batch_size: 10
+    min_aspect_ratio: 0.333
+    min_resolution: 100
+    cycle_count: 100
+
+
+sample_weights:
+  - 1.0
+  - 2.9

@@ -1,0 +1,22 @@
+_target_: src.models_clm.models.ContinuousLVLM_Video_Comp_Gen.from_pretrained
+input_resampler: 
+  _target_: src.models_clm.models.ProjectionLayer
+  num_queries: 64
+  embed_dim: 4096
+  input_dim: 256
+  output_dim: 4096
+
+output_resampler:
+  _target_: src.models_clm.models.ProjectionLayer
+  num_queries: 64
+  embed_dim: 256
+  input_dim: 4096
+  output_dim: 8208 
+
+num_frames: 5
+num_gmm_kernel: 16
+
+lm_loss_scale: 1.0
+rec_loss_scale: 0.0
+l1_loss_scale: 0.0
+gmm_loss_scale: 1.0
