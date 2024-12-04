@@ -79,6 +79,15 @@ Source code of this software can be obtained from: https://github.com/huggingfac
 Copyright 2023 The HuggingFace Team. All rights reserved.
 Source code of this software can be obtained from: https://github.com/huggingface/diffusers/blob/v0.25.0/
 
+3. Mistral
+Copyright 2023 The Mistral AI Team. All rights reserved.
+Source code of this software can be obtained from: https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.1
+
+4. DynamiCrafter
+Copyright 2024 The Tencent Team. All rights reserved.
+Source code of this software can be obtained from: https://github.com/Doubiiu/DynamiCrafter
+
+
 A copy of Apache 2.0 has been included in this file.
 
 
