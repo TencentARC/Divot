@@ -275,7 +275,7 @@ python3 zero_to_fp32.py . pytorch_model.bin
 ```bash
 python3 src/tools/merge_agent_lora_weight.py
 ```
-3. Load your merged model in "mistral7b_merged_xxx" and and corresponding "agent" path, For example,
+3. Load your merged model in "mistral7b_merged_xxx" and corresponding "agent" path, For example,
 ```bash
 llm_cfg_path = 'configs/clm_models/mistral7b_merged_sft_comp.yaml'
 agent_cfg_path = 'configs/clm_models/agent_7b_in64_out64_video_gmm_sft_comp.yaml'
