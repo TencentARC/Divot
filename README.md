@@ -285,5 +285,16 @@ agent_cfg_path = 'configs/clm_models/agent_7b_in64_out64_video_gmm_sft_comp.yaml
 ## License
 `Divot` is licensed under the Apache License Version 2.0 for academic purpose only except for the third-party components listed in [License](License.txt).
 
+## Citation
+If you find the work helpful, please consider citing:
+```bash
+@article{ge2024divot,
+  title={Divot: Diffusion Powers Video Tokenizer for Comprehension and Generation},
+  author={Ge, Yuying and Li, Yizhuo and Ge, Yixiao and Shan, Ying},
+  journal={arXiv preprint arXiv:2412.04432},
+  year={2024}
+}
+```
+
 ## Acknowledge
 Our code for Divot tokenizer and de-tokenizer is built upon [DynamiCrafter](https://github.com/Doubiiu/DynamiCrafter). Thanks for their excellent work!
