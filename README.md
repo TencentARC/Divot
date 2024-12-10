@@ -163,7 +163,7 @@ decode videos using the de-tokenizer.
 
 >Instruction: Generate a story about George's visit to the dentist.
   <tr>
-    <td style="width: 33%;">George felt nervous as the kind dentist explained the check-up to make him comfortabl.</td>
+    <td style="width: 33%;">George felt nervous as the kind dentist explained the check-up to make him comfortable.</td>
     <td style="width: 33%;">At the dentist's office, George opened wide so the dentist could examine his teeth.</td>
     <td style="width: 33%;">George then learns about dental hygiene from a friendly dentist showing him the tools and techniques.</td>
   </tr>
