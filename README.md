@@ -6,7 +6,7 @@
 >We introduce [Divot](https://arxiv.org/abs/2412.04432), a **Di**ffusion-Powered **V**ide**o** **T**okenizer, which leverages the diffusion process for self-supervised video representation learning. We posit that if a video diffusion model can effectively de-noise video clips by taking the features of a video tokenizer as the condition, then the tokenizer has successfully captured robust spatial and temporal information. Additionally, the video diffusion model inherently functions as a de-tokenizer, decoding videos from their representations.
 Building upon the Divot tokenizer, we present **Divot-LLM** through video-to-text autoregression and text-to-video generation by modeling the distributions of continuous-valued Divot features with a Gaussian Mixture Model.
 
-All models, training code and inference code are released!
+All models, training code and inference code are released! **Divot is accepted by CVPR 2025.** :star_struck:
 
 
 ## TODOs
